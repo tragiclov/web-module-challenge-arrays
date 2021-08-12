@@ -121,10 +121,10 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(flavor, index){
+    return flavor[index]
 }
-
+    console.log(`task 5`, getFlavorByIndex(originalFlavors, 7));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -141,10 +141,12 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(flavors, flavor){
+    let index = flavors.indexOf(flavor);
+      flavors.splice(index, 1);
+        return flavors
 }
-
+  console.log(`task 6`, removeFlavorByName(originalFlavors, "Rocky Road"))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -168,15 +170,9 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(array, string){
-  const filteredArray =[]; 
-  for(let i = 0; i < array.getAverageWordLength; i++){
-    if(array[i].include(string)){
-      filteredArray.push(array[i]);
-    }
-  }
-  return filteredArray;
+    
 }
-console.log(`task 7`, filterByWord(originalFlavors, `Chocolate`));
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
